@@ -16,9 +16,18 @@ class Sequelizer: NSObject, NSURLSessionDelegate {
     //properties
     weak var delegate: SequelizerProtocol!
     var data : NSMutableData = NSMutableData()
-    let urlPath: String = "http://einthoven.local/service.php"
+    let websiteBaseURL: String = "http://einthoven.local/"
+    var urlPath: String = String()
+    
+    func phpQueryFile(filename: String) -> String {
+        urlPath = websiteBaseURL + filename
+        return urlPath
+    }
+    
     
     func downloadItems() {
+        
+        phpQueryFile("service.php")
         
         let url: NSURL = NSURL(string: urlPath)!
         var session: NSURLSession!
@@ -40,7 +49,7 @@ class Sequelizer: NSObject, NSURLSessionDelegate {
     func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
         if error != nil {
             print("Failed to download data")
-        }else {
+        } else {
             print("Data downloaded")
             self.parseJSON()
         }

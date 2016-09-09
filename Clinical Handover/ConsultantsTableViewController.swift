@@ -18,9 +18,6 @@ class ConsultantsTableViewController: UITableViewController, SequelizerProtocol 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        listTableView.delegate = self
-//        listTableView.dataSource = self
-        
         let sequelizer = Sequelizer()
         sequelizer.delegate = self
         sequelizer.downloadItems()
