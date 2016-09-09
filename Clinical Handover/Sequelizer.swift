@@ -27,7 +27,7 @@ class Sequelizer: NSObject, NSURLSessionDelegate {
     
     func downloadItems() {
         
-        phpQueryFile("service.php")
+        phpQueryFile("patient-query.php")
         
         let url: NSURL = NSURL(string: urlPath)!
         var session: NSURLSession!
@@ -67,30 +67,32 @@ class Sequelizer: NSObject, NSURLSessionDelegate {
         
         
         var jsonElement: NSDictionary = NSDictionary()
-        let consultants: NSMutableArray = NSMutableArray()
+        //let consultants: NSMutableArray = NSMutableArray()
+        let patients: NSMutableArray = NSMutableArray()
         
         for(var i = 0; i < jsonResult.count; i++)
         {
             
             jsonElement = jsonResult[i] as! NSDictionary
             
-            let consultant = ConsultantModel()
+            // let consultant = ConsultantModel()
+            let patient = PatientModel()
             
             //the following insures none of the JsonElement values are nil through optional binding
-            if let name = jsonElement["Consultant"] as? String,
-                let department = jsonElement["Department"] as? String
+            if let patientName = jsonElement["Patient Name"] as? String,
+                let diagnosis = jsonElement["Diagnosis"] as? String
             {
-                consultant.name = name
-                consultant.department = department
+                patient.patientName = patientName
+                patient.diagnosis = diagnosis
             }
             
-            consultants.addObject(consultant)
+            patients.addObject(patient)
             
         }
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             
-            self.delegate.itemsDownloaded(consultants)
+            self.delegate.itemsDownloaded(patients)
             
         })
     }

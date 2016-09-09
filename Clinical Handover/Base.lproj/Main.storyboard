@@ -8,13 +8,13 @@
         <!--Consultants-->
         <scene sceneID="Pbu-4L-OaO">
             <objects>
-                <tableViewController id="Gph-KY-i1c" customClass="ConsultantsTableViewController" customModule="Clinical_Handover" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Gph-KY-i1c" customClass="PatientsTableViewController" customModule="Clinical_Handover" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="747" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="it1-27-SAY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="consultantCell" textLabel="3pd-M1-eaH" detailTextLabel="QPM-Jf-geu" style="IBUITableViewCellStyleSubtitle" id="9zF-qh-9jt">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="patientCell" textLabel="3pd-M1-eaH" detailTextLabel="QPM-Jf-geu" style="IBUITableViewCellStyleSubtitle" id="9zF-qh-9jt">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9zF-qh-9jt" id="6zH-lb-Kn9">
                                     <autoresizingMask key="autoresizingMask"/>

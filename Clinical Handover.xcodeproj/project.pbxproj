@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F817B4071D82FF4600D410DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F817B4061D82FF4600D410DA /* User.swift */; };
+		F817B4091D82FFB200D410DA /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F817B4081D82FFB200D410DA /* PatientModel.swift */; };
+		F817B40B1D83040600D410DA /* PatientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F817B40A1D83040600D410DA /* PatientsTableViewController.swift */; };
 		F8DDFA891D81DE7200B14156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DDFA881D81DE7200B14156 /* AppDelegate.swift */; };
 		F8DDFA8C1D81DE7200B14156 /* Clinical_Handover.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8DDFA8A1D81DE7200B14156 /* Clinical_Handover.xcdatamodeld */; };
 		F8DDFA911D81DE7200B14156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8DDFA8F1D81DE7200B14156 /* Main.storyboard */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F817B4061D82FF4600D410DA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F817B4081D82FFB200D410DA /* PatientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
+		F817B40A1D83040600D410DA /* PatientsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientsTableViewController.swift; sourceTree = "<group>"; };
 		F8DDFA831D81DE7100B14156 /* Clinical Handover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clinical Handover.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DDFA871D81DE7200B14156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8DDFA881D81DE7200B14156 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +92,10 @@
 				F8DDFA8F1D81DE7200B14156 /* Main.storyboard */,
 				F8DDFAAF1D81F4AA00B14156 /* Sequelizer.swift */,
 				F8DDFAAD1D81E01200B14156 /* ConsultantModel.swift */,
+				F817B4061D82FF4600D410DA /* User.swift */,
+				F817B4081D82FFB200D410DA /* PatientModel.swift */,
 				F8DDFAAB1D81DF6800B14156 /* ConsultantsTableViewController.swift */,
+				F817B40A1D83040600D410DA /* PatientsTableViewController.swift */,
 				F8DDFA861D81DE7200B14156 /* Supporting Files */,
 			);
 			path = "Clinical Handover";
@@ -222,7 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8DDFAAE1D81E01200B14156 /* ConsultantModel.swift in Sources */,
+				F817B40B1D83040600D410DA /* PatientsTableViewController.swift in Sources */,
 				F8DDFA891D81DE7200B14156 /* AppDelegate.swift in Sources */,
+				F817B4071D82FF4600D410DA /* User.swift in Sources */,
+				F817B4091D82FFB200D410DA /* PatientModel.swift in Sources */,
 				F8DDFAAC1D81DF6800B14156 /* ConsultantsTableViewController.swift in Sources */,
 				F8DDFA8C1D81DE7200B14156 /* Clinical_Handover.xcdatamodeld in Sources */,
 				F8DDFAB01D81F4AA00B14156 /* Sequelizer.swift in Sources */,
@@ -423,6 +435,7 @@
 				F8DDFAA71D81DE7200B14156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8DDFAA81D81DE7200B14156 /* Build configuration list for PBXNativeTarget "Clinical HandoverTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +444,7 @@
 				F8DDFAAA1D81DE7200B14156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
