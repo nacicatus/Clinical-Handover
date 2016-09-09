@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FAC-3k-sje">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JeK-yS-24w">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Consultants-->
         <scene sceneID="Pbu-4L-OaO">
             <objects>
                 <tableViewController id="Gph-KY-i1c" customClass="ConsultantsTableViewController" customModule="Clinical_Handover" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="it1-27-SAY">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="747" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="it1-27-SAY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="consultantCell" textLabel="3pd-M1-eaH" detailTextLabel="QPM-Jf-geu" style="IBUITableViewCellStyleSubtitle" id="9zF-qh-9jt">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -35,6 +36,7 @@
                                 <color key="backgroundColor" red="0.59999999999999998" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="Gph-KY-i1c" id="7Sl-k7-pBT"/>
                             <outlet property="delegate" destination="Gph-KY-i1c" id="T3u-NC-k6J"/>
@@ -49,25 +51,66 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9as-h5-MEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1313" y="224"/>
+            <point key="canvasLocation" x="1819" y="-9"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ik9-3f-Y3q">
+        <!--View Controller-->
+        <scene sceneID="N2g-OC-Tuq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FAC-3k-sje" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HOo-w0-YLi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Gph-KY-i1c" kind="relationship" relationship="rootViewController" id="hwb-B4-Zar"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="leo-0m-YB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="JeK-yS-24w" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z5q-EO-AnM"/>
+                        <viewControllerLayoutGuide type="bottom" id="g0F-Xg-nSL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WVf-Rp-fVu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="w5c-vg-PWW">
+                                <rect key="frame" x="16" y="20" width="568" height="212"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vzG-T0-IXD">
+                                <rect key="frame" x="16" y="240" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVo-Cu-SWF">
+                                <rect key="frame" x="281" y="316" width="38" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Gph-KY-i1c" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="f1J-Ey-ZV3"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cxf-ze-V9c">
+                                <rect key="frame" x="16" y="278" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vzG-T0-IXD" firstAttribute="leading" secondItem="WVf-Rp-fVu" secondAttribute="leadingMargin" id="6gY-zy-aBk"/>
+                            <constraint firstItem="Cxf-ze-V9c" firstAttribute="trailing" secondItem="WVf-Rp-fVu" secondAttribute="trailingMargin" id="9wu-VA-HGP"/>
+                            <constraint firstAttribute="centerY" secondItem="sVo-Cu-SWF" secondAttribute="centerY" constant="-31" id="BRX-AO-oGz"/>
+                            <constraint firstItem="vzG-T0-IXD" firstAttribute="trailing" secondItem="WVf-Rp-fVu" secondAttribute="trailingMargin" id="EtG-5B-9lD"/>
+                            <constraint firstAttribute="centerX" secondItem="sVo-Cu-SWF" secondAttribute="centerX" id="Ip8-k7-kY3"/>
+                            <constraint firstItem="Cxf-ze-V9c" firstAttribute="top" secondItem="vzG-T0-IXD" secondAttribute="bottom" constant="8" id="PVB-Xv-Bkp"/>
+                            <constraint firstItem="w5c-vg-PWW" firstAttribute="trailing" secondItem="WVf-Rp-fVu" secondAttribute="trailingMargin" id="Voi-sp-iD9"/>
+                            <constraint firstItem="w5c-vg-PWW" firstAttribute="top" secondItem="Z5q-EO-AnM" secondAttribute="bottom" id="aO1-xK-v4Q"/>
+                            <constraint firstItem="sVo-Cu-SWF" firstAttribute="top" secondItem="Cxf-ze-V9c" secondAttribute="bottom" constant="8" symbolic="YES" id="diF-eB-Lx4"/>
+                            <constraint firstItem="Cxf-ze-V9c" firstAttribute="leading" secondItem="WVf-Rp-fVu" secondAttribute="leadingMargin" id="lak-Sw-6ZZ"/>
+                            <constraint firstItem="w5c-vg-PWW" firstAttribute="leading" secondItem="WVf-Rp-fVu" secondAttribute="leadingMargin" id="qCy-f7-31X"/>
+                            <constraint firstItem="vzG-T0-IXD" firstAttribute="top" secondItem="w5c-vg-PWW" secondAttribute="bottom" constant="8" id="rLR-Nu-fC6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P24-5R-5CZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="616" y="224"/>
+            <point key="canvasLocation" x="921" y="-29"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="header" width="636" height="250"/>
+    </resources>
 </document>
