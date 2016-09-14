@@ -48,7 +48,7 @@ class UserLoginViewController: UIViewController, UserSequelizerProtocol {
                 NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
                 NSUserDefaults.standardUserDefaults().synchronize()
                 self.dismissViewControllerAnimated(true, completion: nil)
-            }
+            } 
         }
         
 
