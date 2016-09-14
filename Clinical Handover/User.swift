@@ -9,20 +9,21 @@
 import Foundation
 
 class User: NSObject {
-    // properties
-    var name: String?
+    
+    var loginName: String?
+    var realName: String?
     var password: String?
+    var userType: String?
     
     override init() {
         
     }
     
-    init(name: String, password: String) {
-        self.name = name
+    init(loginName: String, realName: String, password: String, userType: String) {
+        self.loginName = loginName
+        self.realName = realName
         self.password = password
+        self.userType = userType
     }
     
-    override var description: String {
-        return "Name: \(name), Password: \(password)"
-    }
 }
